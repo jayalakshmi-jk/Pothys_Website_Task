@@ -1,0 +1,1031 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            text-decoration: none;
+        }
+        body {
+            background-size: contain;
+            background-image: url('&quot;https://d1sl07a7h3d3fr.cloudfront.net/admin/store/5aef855b-f4da-4c64-b031-6380eafdf68b-blob&quot;');
+        }
+
+        .navbar {
+            padding: 10px;
+            box-shadow: 0px 0px 3px black;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            background-color: white;
+            /* border: 1px solid black; */
+
+        }
+
+        .navigate {
+            position: sticky;
+            top: 0;
+            z-index: 10;
+        }
+
+
+        ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+            background-color: white;
+
+        }
+
+        .items {
+            box-shadow: 1px 2px 3px solid black;
+        }
+
+        .search {
+            display: flex;
+            flex-direction: row;
+            gap: 5px;
+        }
+
+        .input {
+            display: flex;
+            flex-direction: row;
+            gap: 5px;
+        }
+
+        li {
+            float: left;
+        }
+
+        li a {
+            display: block;
+            color: rgb(15, 10, 10);
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+        }
+
+        li a:hover {
+            background-color: rgb(146, 140, 140);
+        }
+
+        .whole-container {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            gap: 40px;
+            max-width: 90%;
+            padding-top: 40px;
+            position: relative;
+            align-items: center;
+            margin: auto;
+        }
+
+        .container {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        .circle {
+            width: 150px;
+            height: 150px;
+            border: 2px solid green;
+            border-radius: 50%;
+        }
+
+        .circle-cards {
+            display: flex;
+            position: relative;
+            flex-direction: row;
+            gap: 30px;
+            justify-content: center;
+            max-width: 100%;
+        }
+
+        .circle-cards img {
+            height: 150px;
+            width: 150px;
+            border-radius: 50%
+        }
+
+        .circle-cards img:hover {
+            transition: 1s;
+            transform: scale(1.05);
+        }
+
+        .card-container {
+            padding: 30px;
+            background-color: rgb(131 136 139 / 20%);
+            display: flex;
+            border-radius: 8px;
+            flex-direction: row;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 30px;
+            max-width: 100%;
+        }
+
+        .cards {
+            border-radius: 6px;
+            padding: 22px;
+            background-color: white;
+            height: 130px;
+            width: 110px;
+
+        }
+
+        .cards img {
+            height: 100px;
+            width: 100px;
+            border-radius: 15px;
+
+        }
+
+        .cards img:hover {
+            transition: 1s;
+            transform: scale(1.05);
+        }
+
+        .brands {
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            column-gap: 50px;
+            height: 200px;
+            width: 150px;
+
+        }
+
+
+
+
+        .carousel-slide img {
+            padding: 5px;
+            height: 150px;
+            width: 150px;
+            border-radius: 50%;
+        }
+
+        .carousel-slide img:hover {
+            transition: 1s;
+            transform: scale(1.05);
+        }
+
+        .list {
+            display: flex;
+            flex-direction: row;
+            gap: 20px;
+            max-width: 100%;
+        }
+
+        .tea {
+            border: 1px solid rgb(110 105 105 / 27%);
+            height: 400px;
+            width: 300px;
+            padding: 20px;
+
+        }
+
+        .tea img {
+            height: 200px;
+            width: 200px;
+        }
+
+        .tea img:hover {
+            transition: 1s;
+            transform: scale(1.05);
+        }
+
+        .tea select {
+            width: 220px;
+            height: 40px;
+            border: 0.5px solid rgb(110 105 105 / 27%);
+            background-color: white;
+            border-radius: 4px;
+        }
+
+        .tea button {
+            background-color: #019147;
+            border: none;
+            color: white;
+            width: 220px;
+            height: 40px;
+            border-radius: 4px;
+            font-weight: 20px;
+        }
+
+        .whole-container a .btn {
+            background-color: #019147;
+            border: none;
+            color: white;
+            width: 220px;
+            height: 40px;
+            border-radius: 4px;
+            font-weight: 20px;
+        }
+
+        .whole-container a .btn:hover {
+            background-color: rgb(207, 91, 91);
+        }
+    </style>
+
+</head>
+
+<body
+    style=" background-size: contain; background-image: url(&quot;https://d1sl07a7h3d3fr.cloudfront.net/admin/store/5aef855b-f4da-4c64-b031-6380eafdf68b-blob&quot;);">
+
+    <style>
+        /* ---------main-nav----------- */
+        .main-nav {
+            display: flex;
+            text-align: center;
+            justify-content: space-between;
+            background-color: #019147;
+            padding: 10px;
+        }
+
+        .divider {
+            margin: 0 10px;
+            color: black;
+            /* Color of the pipe divider */
+        }
+
+        /* ------------nav-bar---------- */
+
+        .nav-bar {
+            display: flex;
+            justify-content: space-between;
+            flex-direction: row;
+            align-items: center;
+            gap: 5%;
+            padding: 15px 0px;
+            background-color: #FFFFFF;
+            border-bottom: none;
+            box-shadow: 0px 5px 8px gainsboro;
+
+        }
+
+        .nav-logo img {
+            display: flex;
+            justify-content: left;
+            width: 100%;
+            padding: 10px;
+
+        }
+
+        .nav-links ul {
+            display: flex;
+            align-items: center;
+            /* justify-content: center; */
+            width: max-content;
+            gap: 25px;
+            /* margin-left: -95px; */
+
+
+
+        }
+
+        @media (max-width:768px) {
+            .nav-bar{
+                max-width: 100%;
+            }
+            .main-nav{
+                max-width: 100%;
+            }
+            .circle-cards img {
+                max-width: 100%;
+                max-height: 50%;
+            }
+
+            .circle {
+                /* max-width: 10%; */
+                max-height: 100px;
+
+            }
+
+            .arrow img {
+                max-height: 100px;
+
+            }
+
+            .list .tea {
+                max-height: 271px;
+                max-width: 116px;
+            }
+
+            .tea #dp {
+                height: 37px;
+                width: 126px;
+            }
+
+            .tea button {
+                width: 125px;
+            }
+
+            .tea img {
+                max-width: 86%;
+                max-height: 24%;
+            }
+
+            .tab-container {
+                max-width: 100%;
+            }
+
+        }
+
+        @media(max-width:425px) {
+            body {
+                width: 696px;
+            }
+
+            .dairy-container .list {
+                max-width: 111%;
+            }
+
+            .list {
+                max-width: 111%;
+            }
+
+            .circle-cards {
+                max-width: 117%;
+            }
+        }
+    </style>
+    <nav class="main-nav" style="color: #FFFFFF;">
+        <div class="nav-left">
+            <a href="#" class="nav-link" style="color: #FFFFFF;">HOME</a>
+            <span class="divider" style="color: #FFFFFF;">|</span>
+            <span class="location-icon">📍</span>
+            <a href="#" class="deliver-to" style="color: #FFFFFF;">Deliver to: MEENAMBAKKAM-600027</span>
+        </div>
+        <div class="nav-right">
+            <span class="phone-icon">📞</span>
+            <a href="tel:+917305393222" class="nav-link" style="color: #FFFFFF;">+91-7305393222</a>
+            <span class="divider" style="color: #FFFFFF;">|</span>
+            <a href="#" class="nav-link" style="color: #FFFFFF;">Login</a>
+        </div>
+    </nav>
+    <!-- ================================Navbar======================================================= -->
+
+    <div class="navigate">
+        <div class="navbar">
+            <div class="logo">
+                <img src="pothys_logo.png" alt="logo" style="width: 89px;height: 43px;">
+            </div>
+
+            <div class="items">
+                <ul>
+
+                    <li><a class="active" href="index.html">Home</a></li>
+                    <li><a href="#">Deals</a></li>
+                    <li><a href="#">New Arrivals</a></li>
+
+
+                </ul>
+            </div>
+            <div class="search">
+                <div class="input"> <input type="text" placeholder="Search our products"
+                        style="height: 31px; width: 160px;border: none;background-color: #8f8c8c4f;border-radius: 5px;">
+                    <button style="height:33px; border-radius: 5px;border: none;background-color: #8f8c8c4f"><img
+                            src="search_icon.png"
+                            style="width: 25px;height: 25px;background: transparent; border-radius: 20%;"> </button>
+                </div>
+            </div>
+            <div class="trolly">
+                <img src="trolly.jpg" style="height: 44px;width:46px;">
+            </div>
+
+        </div>
+    </div>
+    <!-- =============================Banner====================================================== -->
+    <div class="whole-container">
+        <div class="container">
+            <div class="banner">
+                <img src="img1.jpeg" alt="banner" style="max-width: 100%;">
+            </div>
+            <div class="strip-banner">
+                <img src="pothys_strip_banner.jpeg" alt="strip-banner" style="max-width: 100%;padding: 0px;">
+            </div>
+        </div>
+        <!-- ==============================Circle cards============================================== -->
+        <h1 style="text-align: center;">Curated For You</h1>
+        <div class="circle-cards">
+            <div>
+                <img src="p1.jpg" alt="snacks"><br>
+                <p style="text-align: center;">Breakfast Cereals</p>
+            </div>
+            <div>
+                <img src="p1.jpg" alt="snacks"><br>
+                <p style="text-align: center;">Breakfast Cereals</p>
+            </div>
+
+            <div>
+                <img src="p1.jpg" alt="snacks"><br>
+                <p style="text-align: center;">Breakfast Cereals</p>
+            </div>
+
+            <div>
+                <img src="p1.jpg" alt="snacks"><br>
+                <p style="text-align: center;">Breakfast Cereals</p>
+            </div>
+
+            <div>
+                <img src="p1.jpg" alt="snacks"><br>
+                <p style="text-align: center;">Breakfast Cereals</p>
+            </div>
+
+
+
+            <div class="circle">
+                <div class="arrow"><img src="arrow_down.jpg"> </div>
+            </div><br>
+
+        </div>
+        <!-- ===============================shop by category================================================ -->
+        <h1 style="text-align: center;">Shop by Category</h1>
+        <div class="card-container">
+            <div class="cards">
+                <img src="card.jpg">
+                <h3 style="text-align: center;">Fruits</h3>
+            </div>
+            <div class="cards">
+                <img src="card.jpg">
+                <h3 style="text-align: center;">Fruits</h3>
+            </div>
+            <div class="cards">
+                <img src="card.jpg">
+                <h3 style="text-align: center;">Fruits</h3>
+            </div>
+            <div class="cards">
+                <img src="card.jpg">
+                <h3 style="text-align: center;">Fruits</h3>
+            </div>
+            <div class="cards">
+                <img src="card.jpg">
+                <h3 style="text-align: center;">Fruits</h3>
+            </div>
+            <div class="cards">
+                <img src="card.jpg">
+                <h3 style="text-align: center;">Fruits</h3>
+            </div>
+            <div class="cards">
+                <img src="card.jpg">
+                <h3 style="text-align: center;">Fruits</h3>
+            </div>
+            <div class="cards">
+                <img src="card.jpg">
+                <h3 style="text-align: center;">Fruits</h3>
+            </div>
+            <div class="cards">
+                <img src="card.jpg">
+                <h3 style="text-align: center;">Fruits</h3>
+            </div>
+            <div class="cards">
+                <img src="card.jpg">
+                <h3 style="text-align: center;">Fruits</h3>
+            </div>
+            <div class="cards">
+                <img src="card.jpg">
+                <h3 style="text-align: center;">Fruits</h3>
+            </div>
+            <div class="cards">
+                <img src="card.jpg">
+                <h3 style="text-align: center;">Fruits</h3>
+            </div>
+            <div class="cards">
+                <img src="card.jpg">
+                <h3 style="text-align: center;">Fruits</h3>
+            </div>
+            <div class="cards">
+                <img src="card.jpg">
+                <h3 style="text-align: center;">Fruits</h3>
+            </div>
+            <div class="cards">
+                <img src="card.jpg">
+                <h3 style="text-align: center;">Fruits</h3>
+            </div>
+            <div class="cards">
+                <img src="card.jpg">
+                <h3 style="text-align: center;">Fruits</h3>
+            </div>
+            <div class="cards">
+                <img src="card.jpg">
+                <h3 style="text-align: center;">Fruits</h3>
+            </div>
+            <div class="cards">
+                <img src="card.jpg">
+                <h3 style="text-align: center;">Fruits</h3>
+            </div>
+            <div class="cards">
+                <img src="card.jpg">
+                <h3 style="text-align: center;">Fruits</h3>
+            </div>
+
+        </div>
+        <!-- =================================banner============================================= -->
+        <div class="banner">
+            <img src="img2.jpg" alt="banner" style="max-width: 100%;">
+        </div>
+        <!-- ==============================circle fogg cards================================================= -->
+        <h1 style="text-align: center;">Brands You Love</h1>
+        <div class="carousel">
+            <div class="carousel-track">
+                <div class="carousel-slide">
+                    <img src="fogg.jpg" alt="snacks"><br>
+
+                </div>
+
+
+                <div class="carousel-slide">
+                    <img src="Colgate.jpg" alt="snacks">
+
+                </div>
+                <div class="carousel-slide">
+                    <img src="Aashirvaad.jpg" alt="snacks">
+
+                </div>
+                <div class="carousel-slide">
+                    <img src="goodrej.jpg" alt="snacks">
+
+                </div>
+                <div class="carousel-slide">
+                    <img src="Lakme.jpg" alt="snacks">
+
+                </div>
+
+            </div>
+        </div>
+
+
+
+
+        <style>
+            .carousel {
+                width: 100%;
+                /* Show only 1 image width */
+                height: 200px;
+                overflow: hidden;
+                border-radius: 10px;
+                position: relative;
+            }
+
+            .carousel-track {
+                display: flex;
+                animation: slide 25s infinite;
+                /* duration depends on number of images */
+            }
+
+            .carousel-slide {
+                min-width: 30%;
+                display: flex;
+                /* gap: 0; */
+                justify-content: center;
+                align-items: center;
+            }
+
+            .carousel-slide img {
+                width: 180px;
+                height: 180px;
+                object-fit: contain;
+                border-radius: 50%;
+                background: white;
+                box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+            }
+
+            /* Step-by-step animation */
+            @keyframes slide {
+
+                0%,
+                5% {
+                    transform: translateX(0);
+                }
+
+                15%,
+                20% {
+                    transform: translateX(-200px);
+                }
+
+                30%,
+                35% {
+                    transform: translateX(-400px);
+                }
+
+                45%,
+                50% {
+                    transform: translateX(-600px);
+                }
+
+                60%,
+                65% {
+                    transform: translateX(-800px);
+                }
+
+                75%,
+                80% {
+                    transform: translateX(-1000px);
+                }
+
+                90%,
+                95% {
+                    transform: translateX(-1200px);
+                }
+
+                100% {
+                    transform: translateX(0);
+                }
+            }
+        </style>
+
+        <!-- ====================================banner3==================================================== -->
+
+        <div class="banner">
+            <img src="img3.jpg" alt="banner" style="max-width: 100%;">
+        </div>
+        <!-- ====================================Tea Cards================================================ -->
+        <h1 style="text-align: center;">Quench Your Thirst</h1>
+        <div class="list">
+
+            <div class="tea">
+                <img src="threeroses.jpeg" alt="Pipes"><br>
+                <p style="text-align: center;">Brooke Bond 3 Roses Top Star</p>
+                <select name="dropdown" id="dp">
+                    <option>250g </option>
+                    <option>500g </option>
+                    <option>750g </option>
+                    <option>1kg </option>
+                </select>
+                <p style="display: flex;gap: 20px;"><s>$300</s><span style="color: red;">$222</span> </p>
+                <button>Add to Cart</button>
+            </div>
+            <div class="tea">
+                <img src="bru.jpg" alt="Pipes">
+                <p style="text-align: center;">Brooke Bond 3 Roses Top Star</p>
+                <select name="dropdown" id="dp">
+                    <option>250g </option>
+                    <option>500g </option>
+                    <option>750g </option>
+                    <option>1kg </option>
+                </select>
+                <p style="display: flex;gap: 20px;"><s>$300</s><span style="color: red;">$222</span> </p>
+                <button>Add to Cart</button>
+            </div>
+            <div class="tea">
+                <img src="Tajmahal.jpg" alt="Pipes">
+                <p style="text-align: center;">Brooke Bond 3 Roses Top Star</p>
+                <select name="dropdown" id="dp">
+                    <option>250g </option>
+                    <option>500g </option>
+                    <option>750g </option>
+                    <option>1kg </option>
+                </select>
+                <p style="display: flex;gap: 20px;"><s>$300</s><span style="color: red;">$222</span> </p>
+                <button>Add to Cart</button>
+            </div>
+            <div class="tea">
+                <img src="Levista.jpg" alt="Pipes">
+                <p style="text-align: center;">Brooke Bond 3 Roses Top Star</p>
+                <select name="dropdown" id="dp">
+                    <option>250g </option>
+                    <option>500g </option>
+                    <option>750g </option>
+                    <option>1kg </option>
+                </select>
+                <p style="display: flex;gap: 20px;"><s>$300</s><span style="color: red;">$222</span> </p>
+                <button>Add to Cart</button>
+            </div>
+        </div>
+        <a href="#"><input type="submit" value="Show More↗" class="btn"> </a>
+        <!-- =====================================banner4=================================================== -->
+        <div class="banner">
+            <img src="img4.jpg" alt="banner" style="max-width: 100%;">
+        </div>
+        <h1 style="text-align: center;">Your Dairy Essentials</h1>
+        <!-- =================================Scroll bar========================================= -->
+        <div class="tab-container">
+            <button class="scroll-btn left" id="scrollLeft">&#8249;</button>
+            <div class="tabs" id="tabs">
+                <div class="tab active">Chocolates</div>
+                <div class="tab">Dry Fruits</div>
+                <div class="tab">Oil & Ghee</div>
+                <div class="tab">Fabric Care</div>
+                <div class="tab">Disposables</div>
+                <div class="tab">Hair Care</div>
+                <div class="tab">Skin Care</div>
+                <div class="tab">Battery & Electicals</div>
+            </div>
+            <button class="scroll-btn right" id="scrollRight">&#8250;</button>
+        </div>
+
+        <style>
+            .tab-container {
+                display: flex;
+                align-items: center;
+                position: relative;
+                background: #fff;
+                padding: 5px;
+                box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+                overflow: hidden;
+            }
+
+            .scroll-btn {
+                border: none;
+                background: #fff;
+                font-size: 20px;
+                cursor: pointer;
+                padding: 5px 10px;
+                z-index: 10;
+            }
+
+            .tabs {
+                display: flex;
+                overflow-x: auto;
+                scrollbar-width: none;
+                /* Firefox */
+                -ms-overflow-style: none;
+                /* IE 10+ */
+                scroll-behavior: smooth;
+                flex: 1;
+            }
+
+            .tab {
+                white-space: nowrap;
+                padding: 10px 20px;
+                font-size: 16px;
+                cursor: pointer;
+                color: #000;
+                border-radius: 6px 6px 0 0;
+            }
+
+            .tab:hover {
+                background: #f1f1f1;
+            }
+
+            .tab.active {
+                background: #f8f8f8;
+                font-weight: bold;
+            }
+        </style>
+        <!-- ====================================diarymilk card===================== -->
+        <div class="dairy-container">
+            <div class="list">
+
+                <div class="tea">
+                    <img src="dairymilk.jpg" alt="Pipes"><br>
+                    <p style="text-align: center;">dairymilk</p>
+                    <select name="dropdown" id="dp">
+                        <option>6.6g </option>
+                        <option>10.5g </option>
+                        <option>14.3g </option>
+                        <option>9kg </option>
+                    </select>
+                    <p style="display: flex;gap: 20px;"><s>$5</s><span style="color: red;">$4</span> </p>
+                    <button>Add to Cart</button>
+                </div>
+
+                <div class="tea">
+                    <img src="5star.jpg" alt="Pipes">
+                    <p style="text-align: center;">5 Star</p>
+                    <select name="dropdown" id="dp">
+                        <option>6.6g </option>
+                        <option>10.5g </option>
+                        <option>14.3g </option>
+                        <option>9kg </option>
+                    </select>
+                    <p style="display: flex;gap: 20px;"><s>$5</s><span style="color: red;">$4</span> </p>
+                    <button>Add to Cart</button>
+                </div>
+                <div class="tea">
+                    <img src="perk.jpg" alt="Pipes">
+                    <p style="text-align: center;">Perk</p>
+                    <select name="dropdown" id="dp">
+                        <option>6.6g </option>
+                        <option>10.5g </option>
+                        <option>14.3g </option>
+                        <option>9kg </option>
+                    </select>
+                    <p style="display: flex;gap: 20px;"><s>$4</s><span style="color: red;">$4</span> </p>
+                    <button>Add to Cart</button>
+                </div>
+                <div class="tea">
+                    <img src="munch.jpg" alt="Pipes">
+                    <p style="text-align: center;">Munch</p>
+                    <select name="dropdown" id="dp">
+                        <option>6.6g </option>
+                        <option>10.5g </option>
+                        <option>14.3g </option>
+                        <option>9kg </option>
+                    </select>
+                    <p style="display: flex;gap: 20px;"><s>$5</s><span style="color: red;">$4</span> </p>
+                    <button>Add to Cart</button>
+                </div>
+
+
+            </div>
+            <div><a href="#"><input type="submit" value="Show More↗" class="btn"> </a></div>
+        </div>
+        <style>
+            .dairy-container {
+                padding: 30px;
+                background-color: rgb(131 136 139 / 20%);
+                display: flex;
+                border-radius: 8px;
+                flex-direction: row;
+                flex-wrap: wrap;
+                justify-content: center;
+                gap: 30px;
+                max-width: 100%;
+            }
+
+            .tea {
+                background-color: white;
+
+            }
+
+            .tea button:hover {
+                background-color: rgb(207, 91, 91);
+            }
+
+            .dairy-container a .btn {
+                background-color: #019147;
+                border: none;
+                color: white;
+                width: 220px;
+                height: 40px;
+                border-radius: 4px;
+                font-weight: 20px;
+            }
+
+            .dairy-container a .btn:hover {
+                background-color: rgb(207, 91, 91);
+            }
+        </style>
+
+        <!--==========================================footer================================== -->
+
+        <style>
+            body {
+                margin: 0%;
+                padding: 0%;
+                font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            }
+
+            .fullfooter {
+                display: grid;
+                grid-template-columns: 1fr 1fr 2fr;
+                grid-template-areas:
+                    'fot1 fot2 fot3';
+                padding: 50px;
+                background-color: rgba(252, 219, 219, 0.274);
+
+
+            }
+
+            .fot1 {
+                grid-area: fot1;
+            }
+
+            .fot2 {
+                grid-area: fot2;
+            }
+
+            .fot2 a {
+                text-decoration: none;
+                color: black;
+            }
+
+            .last a {
+                text-decoration: none;
+                color: black;
+            }
+
+            .last a:hover {
+                transition-duration: 1s;
+                color: rgb(1, 145, 71);
+            }
+
+            .fot2 a:hover {
+                color: rgb(1, 145, 71);
+                transition-duration: 1s
+            }
+
+            .fot3 {
+                grid-area: fot3;
+                margin-left: 40px;
+            }
+
+            .fot3 a {
+                text-decoration: none;
+                color: black;
+            }
+
+            .fot3 a:hover {
+                color: rgb(1, 145, 71);
+                transition-duration: 1s
+            }
+
+            .f1 img {
+                height: 75px;
+            }
+
+            .footer-bottom {
+                display: flex;
+                padding-left: 50px;
+                background-color: rgba(252, 219, 219, 0.274);
+
+
+            }
+
+            .fot1 a {
+                text-decoration: none;
+                color: black;
+            }
+
+            .fot1 a:hover {
+                color: rgb(1, 145, 71);
+                transition-duration: 1s;
+            }
+
+            .f12 {
+                margin-top: 30px;
+            }
+
+            .social-icons {
+                margin-left: 205px;
+            }
+
+            .social-icons img {
+                height: 30px;
+            }
+
+            .last {
+                margin-top: 40px;
+            }
+        </style>
+        <div class="fullfooter">
+            <div class="fot1">
+                <div class="f1">
+                    <img src="pothys_logo.png" alt="Pothys Mart">
+                </div>
+                <p>
+                    407/7, G.S.T Road, Zamin Pallavaram,<br>
+                    Chromepet, Chengalpattu,<br>
+                    Tamil Nadu - 600044
+                </p>
+
+
+            </div>
+            <div class="fot2">
+                <h3>Need Help</h3>
+                <!-- <h3>Need Help</h3> -->
+                <p>📞 <a href="tel:7305393222">7305393222</a> / <a href="tel:04443666333">04443666333</a></p>
+                <hr>
+                <p>📧 <a href="mailto:supermarket.chr@pothys.com">supermarket.chr@pothys.com</a></p>
+            </div>
+            <div class="fot3">
+                <div class="f11">
+                    <h4>Categories</h4>
+                    <a href="#">Staples</a> |
+                    <a href="#">Snacks</a> |
+                    <a href="#">Beverages</a> |
+                    <a href="#">Chilled Foods</a> |
+                    <a href="#">Ready To Cook</a> |
+                    <a href="#">Baby Care</a> |
+                    <a href="#">Household</a> |
+                    <a href="#">Cleaning</a> |
+                    <a href="#">Health Care</a>
+                </div>
+                <div class="f12">
+                    <b>Links</b>
+                    <p>Home Deals New Arrivals</p>
+
+                </div>
+
+            </div>
+
+
+
+        </div>
+        <div class="footer-bottom">
+            <div class="last">
+                <a href="#">Privacy Policy</a> |
+                <a href="#">Refund Policy</a> |
+                <a href="#">Shipping Policy</a> |
+                <a href="#">Terms & Conditions</a>
+            </div>
+            <div class="social-icons">
+                <h4>Download Our App</h4>
+                <img src="https://upload.wikimedia.org/wikipedia/commons/7/78/Google_Play_Store_badge_EN.svg"
+                    alt="Google Play">
+                <img src="https://developer.apple.com/assets/elements/badges/download-on-the-app-store.svg"
+                    alt="App Store">
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
